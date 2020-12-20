@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for topic in topics %}
+    <ul>
+        <li>
+        <a href={% url 'quiz_app:quiz_detail' pk=topic.pk %}>{{topic}}</a>
+        </li>
+    </ul>
+{% endfor %} 
+{% endblock %}
